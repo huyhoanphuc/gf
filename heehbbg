@@ -3,7 +3,7 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 
 -- Create entity
 local entity = Spawner.createEntity({
-    CustomName = "A-666", -- Custom name of your entity
+    CustomName = "Asitsitsit", -- Custom name of your entity
     Model = "rbxassetid://16834807322", -- Can be GitHub file or rbxassetid
     Speed = 25, -- Percentage, 100 = default Rush speed
     DelayTime = 0, -- Time before starting cycles (seconds)
@@ -88,7 +88,7 @@ end
 
 entity.Debug.OnEntityDespawned = function()
     print("Entity has despawned:")
-    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/heehbbg"))()
 end
 
 entity.Debug.OnEntityStartMoving = function()
@@ -110,6 +110,8 @@ end
 
 entity.Debug.OnDeath = function()
     warn("Player has died.")
+    game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-666"
+
     --Jumpscare
     coroutine.wrap(function()
     local MultimonsterJumpssjgahd = GetGitSound("https://github.com/huyhoanphuc/jhse/blob/main/km_20240827_720p_12f_20240827_013106.mp3?raw=true","MultimonsterJumpssjgahd")
