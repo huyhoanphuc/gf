@@ -400,7 +400,7 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
-loadstring(game:HttpGet("https://pastefy.app/Fknmq34h/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/jhse/refs/heads/main/5665555"))()
 end)
 
 entity:SetCallback("OnStartMoving", function()
