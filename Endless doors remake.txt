@@ -32,9 +32,8 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
 coroutine.wrap(function()
 while true do wait(109)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
+if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-if not workspace:FindFirstChild("SeekMovingNewClone") or workspace:FindFirstChild("FigureSetup") then
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -296,11 +295,9 @@ local entity = spawner.Create({
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
+if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-if not workspace:FindFirstChild("SeekMovingNewClone") or workspace:FindFirstChild("FigureSetup") then
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/Reboundvs"))()
 end
 end
