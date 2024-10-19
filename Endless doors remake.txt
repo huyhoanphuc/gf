@@ -229,7 +229,9 @@ end
 end
 end)()
 
---Rebound
+--Rebounds
+coroutine.wrap(function()
+wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
@@ -508,3 +510,4 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
+end)()
