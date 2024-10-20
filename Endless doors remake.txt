@@ -67,7 +67,7 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzix
 local entity = spawner.Create({
 	Entity = {
 		Name = "Matcher",
-		Asset = "rbxassetid://12705324154",
+		Asset = "rbxassetid://12459977063",
 		HeightOffset = 0
 	},
 	Lights = {
@@ -273,7 +273,7 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzix
 local entity = spawner.Create({
 	Entity = {
 		Name = "Rebound",
-		Asset = "rbxassetid://11403715334",
+		Asset = "rbxassetid://12847684107",
 		HeightOffset = 0
 	},
 	Lights = {
