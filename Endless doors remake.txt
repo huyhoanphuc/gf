@@ -531,6 +531,8 @@ end)
 
 entity:SetCallback("OnStartMoving", function()
     print("Entity has started moving")
+   wait(6)
+     game.workspace.Claim:Destroy()
 end)
 
 entity:SetCallback("OnEnterRoom", function(room, firstTime)
