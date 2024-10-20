@@ -9,9 +9,6 @@ end)()
 --Rooms
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
 
---RTX
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Flybobbb/robloxscripts/main/rtx.lua"))()
-
 --NewDoorsSound
 coroutine.wrap(function()
 while true do wait()
