@@ -9,20 +9,10 @@ local function GetGitSound(GithubSnd,SoundName)
 			end
 			
 --Hafs
-coroutine.wrap(function()
-while true do wait()
-game.Workspace.Camera.DeathBackgroundBlue.Lights.BigLight.Attachment.Moon.Texture = "rbxassetid://14380950090"
-game.Workspace.Camera.DeathBackgroundBlue.ParticleEmitter.Color = ColorSequence.new(Color3.fromRGB(239, 139, 139))
-game.Workspace.Camera.DeathBackgroundBlue.PointLight.Color = Color3.fromRGB(239, 139, 139)
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Pitch = 0.5
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Volume = "2"
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Volume = "2"
-game.Workspace.Camera.DeathBackgroundYellow.Lights.BigLight.Attachment.Moon.Texture = "rbxassetid://14380950090"
-game.Workspace.Camera.DeathBackgroundYellow.ParticleEmitter.Color = ColorSequence.new(Color3.fromRGB(239, 139, 139))
-game.Workspace.Camera.DeathBackgroundYellow.PointLight.Color = Color3.fromRGB(239, 139, 139)
-end
-end)()
 
 --Rooms
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
@@ -170,10 +160,7 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
-		local Mabad = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/matcher%20jumpscare%20new.mp3?raw=true","Mabad")
-				Mabad.Parent = workspace
-				Mabad.Volume = 2
-				Mabad:Play()
+
 		local JumpscareGui = Instance.new("ScreenGui")
     local Background = Instance.new("Frame")
     local Face = Instance.new("ImageLabel")
@@ -219,7 +206,10 @@ eq.HighGain = 10
 eq.MidGain = 10
 eq.LowGain = 3.7
 eq.Parent = scare
-    
+    local Rebed = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/matcher%20jumpscare%20new.mp3?raw=true","Rebed")
+Rebed.Parent = workspace
+Rebed.Volume = 2
+Rebed:Play()
         task.spawn(function()
             while JumpscareGui.Parent do
                 Background.BackgroundColor3 = Color3.fromRGB(61, 4, 4)
@@ -372,10 +362,6 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
-		local Rebad = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/Rebound%20Jumpscare%20New.mp3?raw=true","Rebad")
-				Rebad.Parent = workspace
-				Rebad.Volume = 2
-				Rebad:Play()
 		local JumpscareGui = Instance.new("ScreenGui")
     local Background = Instance.new("Frame")
     local Face = Instance.new("ImageLabel")
@@ -421,7 +407,10 @@ eq.HighGain = 10
 eq.MidGain = 10
 eq.LowGain = 3.7
 eq.Parent = scare
-    
+    local Rebad = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/Rebound%20Jumpscare%20New.mp3?raw=true","Rebad")
+Rebad.Parent = workspace
+Rebad.Volume = 2
+Rebad:Play()
         task.spawn(function()
             while JumpscareGui.Parent do
                 Background.BackgroundColor3 = Color3.fromRGB(3, 25, 99)
