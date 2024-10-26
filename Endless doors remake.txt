@@ -14,10 +14,6 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yello
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Volume = "2"
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Volume = "2"
 
---Rooms
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
-
-
 --NewDoorsSound
 coroutine.wrap(function()
 while true do wait()
