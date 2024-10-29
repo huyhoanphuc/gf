@@ -1,99 +1,70 @@
-function ReplaceAudGit(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(SoundName..".mp3")
-end
-local a = game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music
-a.Blue.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/endlessguide.mp3?raw=true","Track1")
-a.Blue.Volume = 7
-function ReplaceAudGit(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(SoundName..".mp3")
-end
-a.Blue.End.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/endlessguide.mp3?raw=true","Track1End")
-a.Blue.End.Volume = 7
+local function GetGitSound(GithubSnd,SoundName)
+				local url=GithubSnd
+				if not isfile(SoundName..".mp3") then
+				writefile(SoundName..".mp3", game:HttpGet(url))
+				end
+				local sound=Instance.new("Sound")
+				sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+				return sound
+			end
 
-
-function ReplaceAudGit(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(SoundName..".mp3")
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
 end
-workspace.SeekMovingNewClone.SeekMusic.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/EndlessSeekChase.mp3?raw=true","EndlessSeekChase")
+
+function CustomGitSound(soundlink, vol, filename)
+    local RipeaMoving = Instance.new("Sound")
+    RipeaMoving.SoundId = GitAud(soundlink, filename)
+    RipeaMoving.Parent = workspace
+    RipeaMoving.Volume = 0
+    RipeaMoving:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/videoplayback%20(16).mp3?raw=true", 1, "Rebdasaas")
+
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local RipeaMoving = Instance.new("Sound")
+    RipeaMoving.SoundId = GitAud(soundlink, filename)
+    RipeaMoving.Parent = workspace
+    RipeaMoving.Volume = 0
+    RipeaMoving:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241029_360p_12f_20241029_200547.mp3?raw=true", 1, "Reabdsaas")
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.SoundId = "rbxasset://custom_gloop/Rebdasaas.mp3"
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Volume = 7
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.End.SoundId = "rbxasset://custom_gloop/Reabdsaas.mp3"
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.End.Volume = 7
+
+--seek
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+wait(0.0005)
+workspace.SeekMovingNewClone.SeekMusic.SoundId = GetGitSound("https://github.com/check78/worldcuuuup/blob/main/EndlessSeekChase.mp3?raw=true","EndlessSeekChase")
 workspace.SeekMovingNewClone.SeekMusic.Volume = 1
-
-function ReplaceAudGit(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(SoundName..".mp3")
-end
-game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/Unhinged3.mp3?raw=true","Unhinged3")
-
-function ReplaceAudGit(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(SoundName..".mp3")
-end
-workspace.Ambience_FigureEnd.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/FigureEnd.mp3?raw=true","FigureEnd")
-
-function ReplaceAudGit(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(SoundName..".mp3")
-end
-game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceStart.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/FigureStart.mp3?raw=true","FigureStart")
-
--- GuidingLight Music
-coroutine.wrap(function()
-    while true do
-        wait(0.0005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        a.Blue.Volume = 7
-        a.Blue.End.Volume = 7
-    end
-end)()
-
--- Optional Seek Eyes it might lag your device
-coroutine.wrap(function()
-    while true do
-        wait(0.0005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0.0005)
-        local ohmygah = Instance.new("Folder")
-        ohmygah.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value]
-    end
-end)()
--- Optional Seek Eyes 2 it might lag your device
-coroutine.wrap(function()
-    while true do
-        wait(0.005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].ChildAdded:Connect(function(seekeye)
-	if seekeye.Name == "Eye" then
-		wait(0.0005)
-		local getSeek:Model = game:GetObjects("rbxassetid://11854254581")[1]
-		getSeek.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Folder
-		getSeek:PivotTo(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye.Black.CFrame)
-		workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye:Destroy()
-	else
-
-	end
 end)
-    end
+
+--Ambiencea
+coroutine.wrap(function()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+wait(0.0005)
+game.Workspace.CurrentRooms["50"].FigureSetup.Ambience.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/Unhinged3.mp3?raw=true","Unhinged3")
+lgame.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/FigureEnd.mp3?raw=true","FigureEnd")
+end)
 end)()
+
 -- Seek Model
 workspace.ChildAdded:Connect(function(seek)
 	if seek.Name == "SeekMovingNewClone" then
@@ -111,14 +82,14 @@ workspace.ChildAdded:Connect(function(seek)
 		Weld.Part0 = getSeek.PrimaryPart
 		Weld.Part1 = workspace.SeekMovingNewClone.Figure
 	else
-
 	end
 end)
+
 -- Seek Model 2
 workspace.ChildAdded:Connect(function(seek)
 	if seek.Name == "SeekMovingNewClone" then
-		wait(0.5)
-	    workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+         wait(0.5)
+         workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
 workspace.SeekMovinNewClone.SeekRig.StringCheese:Destroy()
 workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
 workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
@@ -130,11 +101,11 @@ workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
 workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
 workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
 workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMoving.SeekRigNewClone.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
 	else
-
 	end
 end)
+			
 
 local function GetGitSound(GithubSnd,SoundName)
 				local url=GithubSnd
@@ -146,12 +117,6 @@ local function GetGitSound(GithubSnd,SoundName)
 				return sound
 			end
 			
---Hafs
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Pitch = 0.5
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Volume = "2"
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Volume = "2"
-
 --NewDoorsSound
 coroutine.wrap(function()
 while true do wait()
