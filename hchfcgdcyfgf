@@ -1,3 +1,17 @@
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Stamina") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Stamina"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+
 --MuscSeekaajs
 coroutine.wrap(function()
 function GitAud(soundgit,filename)
