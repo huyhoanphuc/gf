@@ -11,6 +11,60 @@ Test.Name = "Stamina"
 Test.Parent = game:GetService("ReplicatedStorage")
 Test = 1
 
+-- I Thank you noname for frostbite
+
+
+-- Original By Noonie and ping
+
+
+local blackListeds = {"Yarik9847"}
+
+if table.find(blackListeds, game.Players.LocalPlayer.Name) then
+
+game.Players.LocalPlayer:Kick("You been kicked from Hardcore: You are shared script to others people. ")
+
+end
+
+
+-------- goober
+coroutine.wrap(function()
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function(v)
+   L = game:GetService("Workspace").CurrentRooms[v].PathfindNodes:Clone()
+L.Parent = game:GetService("Workspace").CurrentRooms[v]
+L.Name = 'Nodes'
+
+end)
+end)()
+
+print("Loade") 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.SoundId = "rbxassetid://10472612727" 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
+ 
+game.Lighting.FogColor = Color3.fromRGB(0, 0, 0) 
+game.Lighting.FogStart = 5 
+game.Lighting.FogEnd = 800 
+ 
+game.ReplicatedStorage.Sounds.BulbZap.SoundId = "rbxassetid://4398878054"  
+ 
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function msg(message)
+    
+    local mainGame = require(LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+    
+    
+    mainGame.caption(message, true)
+end
+
+if game.ReplicatedStorage.GameData.LatestRoom.Value > 1 then 
+	game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Error"
+	firesignal(game.ReplicatedStorage.RemoteEvents.DeathHint.OnClientEvent, {"You need to execute the script at door 0!", "Remember this!"}, "Blue")
+	game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)  
+	return
+end
+
 
 --MuscSeekaajs
 coroutine.wrap(function()
