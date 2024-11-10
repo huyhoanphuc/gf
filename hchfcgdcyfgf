@@ -131,7 +131,7 @@ msg(SillyBillies1[math.random(1,#SillyBillies1)])
 
 --Ripper
 coroutine.wrap(function()
-while true do wait(112)
+while true do wait(108)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
 end
 end)()
@@ -139,7 +139,7 @@ end)()
 
 --Frostbite
 coroutine.wrap(function()
-wait(230)
+wait(160)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
 end)()
@@ -212,7 +212,7 @@ end)()
 
 --Frostbiteb
 coroutine.wrap(function()
-wait(230)
+wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
@@ -1542,7 +1542,7 @@ end)()
 
 --Rebound
 coroutine.wrap(function()
-wait(240)
+wait(136)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
@@ -2759,7 +2759,7 @@ end)()
 --Shocker
 coroutine.wrap(function()
 while true do
-wait(math.random(96, 97))
+wait(math.random(32, 37))
 loadstring(game:HttpGet("https://pastefy.app/1mLzDwTN/raw"))()
 end
 end)()
@@ -2767,7 +2767,7 @@ end)()
 
 --DeerGod
 coroutine.wrap(function()
-while true do wait(232)
+while true do wait(332)
 loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
 end
 end)()
@@ -2797,11 +2797,77 @@ end)()
 
 --Cease
 coroutine.wrap(function()
-while true do wait(216)
+while true do 
+wait(math.random(23, 370))
 loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/hdisgvshceaseeee"))()
 end
 end)()
 
+--A90
+coroutine.wrap(function()
+while true do wait(143)
+local TweenService = game:GetService("TweenService")
+	local LocalPlayer = game.Players.LocalPlayer
+	local UI = game.Players.LocalPlayer.PlayerGui.MainUI
+	local Jumpscare_A90 = UI.Jumpscare.Jumpscare_A90
+	local A90Module = UI.Initiator.Main_Game.RemoteListener.Modules.A90
+	local MainGame = require(UI.Initiator.Main_Game)
+	 Jumpscare_A90.Face.Image = "http://www.roblox.com/asset/?id=12635832722"
+	Jumpscare_A90.FaceAngry.Image = "http://www.roblox.com/asset/?id=12635955412"
+	
+function DeathHint(args, Color) -- credits to Master Oogway in the kardin hong discord server
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function Hint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+Hint({
+unpack(args)
+}, Color)
+end
+spawn(function()
+require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.A90)(require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game))
+end)
+spawn(function()
+wait(2) -- dont know any other way
+Survived = true
+end)
+repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_A90.FaceAngry.Visible == true or Survived
+if Survived then
+local ReSt = game:GetService("ReplicatedStorage") 
+ ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-90"
+ pcall(function()
+  DeathHint({
+  "Oh... Hello.",
+  "I'm surprised you found this place...",
+  "It's pretty tedious just to get here, last time I checked",
+  "Anyways, what'd you die to?",
+  "Oh that one...",
+  "I hope that one isn't too confusing...",
+  "All I'll let you know is that it starts attacking after room A-90.",
+  "So, you could call it A-90.",
+  "Anyways, I hope you don't mind trying again. It would be helpful.",
+}, "Yellow")
+end)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(78)
+end
+end
+end)()
 
 --Asitty
 coroutine.wrap(function()
