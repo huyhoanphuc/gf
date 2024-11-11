@@ -65,7 +65,6 @@ if game.ReplicatedStorage.GameData.LatestRoom.Value > 1 then
 	return
 end
 
-
 --MuscSeekaajs
 coroutine.wrap(function()
 function GitAud(soundgit,filename)
@@ -107,220 +106,6 @@ game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceStart.SoundId = GetGitSoun
 end)
 end)()
 
--- Optional Seek Eyes it might lag your device
-coroutine.wrap(function()
-    while true do
-        wait(0.0005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0.0005)
-        local ohmygah = Instance.new("Folder")
-        ohmygah.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value]
-    end
-end)()
-
--- Optional Seek Eyes 2 it might lag your device
-coroutine.wrap(function()
-    while true do
-        wait(0.005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].ChildAdded:Connect(function(seekeye)
-	if seekeye.Name == "Eye" then
-		wait(0.0005)
-		local getSeek:Model = game:GetObjects("rbxassetid://11717372116")[1]
-		getSeek.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Folder
-		getSeek:PivotTo(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye.Black.CFrame)
-		workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye:Destroy()
-	else
-
-	end
-end)
-    end
-end)()
-
--- New Seek music and animation loader
-coroutine.wrap(function()
-    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-        wait(0.0005)
-        if game.Workspace:FindFirstChild("SeekMovingNewClone") then
-
-            function ReplaceAudGit(GithubSnd, SoundName)
-                local url = GithubSnd
-                if not isfile(SoundName .. ".mp3") then
-                    writefile(SoundName .. ".mp3", game:HttpGet(url))
-                end
-                return (getcustomasset or getsynasset)(SoundName .. ".mp3")
-            end
-
-            local a = game.Workspace.SevingNewClone
-            a.Seesic.SoundId = ReplaceAudGit("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true", "NewSeek")
-        end
-    end)
-end)()
-
--- Seek Model
-workspace.ChildAdded:Connect(function(seek)
-	if seek.Name == "SeekMovingNewClone" then
-		wait(0.5)
-	    workspace.SeekMovingNewClone.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://0"
-		for i,v in pairs(workspace.SeekMovingNewClone.SeekRig:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.Transparency = 1
-			end
-		end
-		local getSeek = game:GetObjects("rbxassetid://11664451634")[1]
-		getSeek.Parent = workspace.SeekMovingNewClone.Figure
-		getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
-		local Weld = Instance.new("WeldConstraint",getSeek)
-		Weld.Part0 = getSeek.PrimaryPart
-		Weld.Part1 = workspace.SeekMovingNewClone.Figure
-        workspace.SeekMovingNewClone.SeekMusic.SoundId = "rbxasset://custom_gloop/Hereicomeseekog.mp3"
-        workspace.SeekMovingNewClone.SeekRig:Destroy()
-       wait()
-        workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.FootseptsFar:Play()
-		 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Footsteps:Play()
-	   workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Splashing:Play()
-	   workspace.SeekMovingNewClone.Figure.SeekMoving.Figure["Splashing Far"]:Play()
-	wait()
-		local SeekRig = workspace.SeekMovingNewClone.Figure.SeekMoving:FindFirstChild("SeekRig")
-    	SeekRig:FindFirstChild("Root").Anchored = true
-    
-       local seksound = workspace.SeekMovingNewClone.SeekMusic
-	seksound.Played:Connect(function()
-		spawn(function()
-			wait(7)
-			workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.FootseptsFar:Play()
-			 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Footsteps:Play()
-			 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Splashing:Play()
-			 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure["Splashing Far"]:Play()
-		end)
-		local raiser = SeekRig.AnimationController:LoadAnimation(SeekRig.AnimRaise) raiser:Play()
-		raiser.Stopped:Wait()
-		SeekRig.AnimationController:LoadAnimation(SeekRig.AnimRun):Play()
-end)
-       
---SeekPivo
-  coroutine.wrap(function()
-       while true do wait()
-        getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
-       end
-  end)()
-       
---Seek
-coroutine.wrap(function()
-  loadstring(game:HttpGet("https://pastefy.app/6yFiipMI/raw"))()
-end)() 
-
-	else
-
-	end
-end)
-
--- Seek Model 2
-workspace.ChildAdded:Connect(function(seek)
-	if seek.Name == "SeekMovingNewClone" then
-		wait(0.5)
-	    workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovinNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-wait(0.1)
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
-workspace.SeekMoving.SeekRigNewClone.StringCheese:Destroy()
-	else
-	end
-end)
-     
--- NEW SEEK 
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function() 
-    wait(3.5) 
-    if not workspace:FindFirstChild("SeekMovingNewClone") then 
-        return  
-    end 
-    
-    local RealSeek = workspace:FindFirstChild("SeekMovingNewClone") 
-    local RealSeekRig = RealSeek:FindFirstChild("SeekRig") 
-
-    for _, v in pairs(seekNew.Figure:GetChildren()) do 
-        if v:IsA("Sound") then 
-            v:Stop() 
-        end 
-    end 
-
-    RealSeekRig.Head.Eye:Destroy() 
-    RealSeekRig.Head.Black:Destroy() 
-    seekNew.Parent = workspace 
-    local SeekRig = seekNew:FindFirstChild("SeekRig") 
-    SeekRig:FindFirstChild("Root").Anchored = true 
-
-    spawn(function() 
-        while game:GetService("RunService").Heartbeat:Wait() and RealSeek do 
-            if RealSeekRig:FindFirstChild("Root") then 
-                SeekRig:FindFirstChild("Root").CFrame = RealSeekRig:FindFirstChild("Root").CFrame 
-            end 
-            for _, v in pairs(RealSeek.Figure:GetChildren()) do 
-                RealSeek.Figure.Footsteps:Stop() 
-                RealSeek.Figure.FootstepsFar:Stop() 
-            end 
-            for _, v in pairs(RealSeekRig:GetChildren()) do 
-                if v:IsA("BasePart") then 
-                    v.Transparency = 1 
-                    
-                    local sound = a.Ambience
-
-            if sound:IsA("Sound") then
-                sound.Played:Connect(function()
-                    print("YEEEEE WORKING!!!!") 
-                    local model = workspace:WaitForChild("seek2")
-                    local seekRig = model:WaitForChild("SeekRig")
-                    local animationController = seekRig:FindFirstChildOfClass("AnimationController")
-
-                    if animationController then
-                        local anim = seekRig:FindFirstChild("AnimRaise")
-                        
-                        if anim and anim:IsA("Animation") then
-                            local animationTrack = animationController:LoadAnimation(anim)
-                            animationTrack:Play()
-                        else
-                            warn("AnimRaise not found or is not an animation.")
-                        end
-                    else
-                        warn("AnimationController not found in SeekRig.")
-                    end
-                    
-                    wait(8.2)
-
-                    local model = workspace:WaitForChild("seek2")
-                    local seekRig = model:WaitForChild("SeekRig")
-                    local animationController = seekRig:FindFirstChildOfClass("AnimationController")
-
-                    if animationController then
-                        local anim = seekRig:FindFirstChild("AnimRun")
-                        
-                        if anim and anim:IsA("Animation") then
-                            local animationTrack = animationController:LoadAnimation(anim)
-                            animationTrack:Play()
-                        else
-                            warn("AnimRun not found or is not an animation.")
-                        end
-                    else
-                        warn("AnimationController not found in SeekRig.")
-                    end
-                end)
-            else
-                warn("Sound not found or is not an instance of Sound.")
-            end
-                end 
-            end 
-        end 
-    end)
-end)
-
 --BlueDies
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.SoundId = "rbxassetid://10472612727" 
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
@@ -342,14 +127,12 @@ wait(3)
 local SillyBillies1 = {"Good Luck!", "Holy ####... Lois", "Fuck L_0 all my homies hate L_0", "who tf is joe???", "Do Not.", "Five Nights at Freddy's, Is this where you want to be? I just don't get it!!! Why you want to stay?"}
 msg(SillyBillies1[math.random(1,#SillyBillies1)])
 
-
 --Ripper
 coroutine.wrap(function()
 while true do wait(108)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
 end
 end)()
-
 
 --Frostbite
 coroutine.wrap(function()
@@ -477,7 +260,6 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
 end)()
 
-
 --Rebound
 coroutine.wrap(function()
 wait()
@@ -601,7 +383,7 @@ scare.Parent = game.Workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
-scare.Volume = 2
+scare.Volume = 5
 
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -1753,10 +1535,9 @@ end)
 entity:Run()
 end)()
 
-
 --Rebound
 coroutine.wrap(function()
-wait(136)
+wait(176)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
@@ -1817,7 +1598,7 @@ scare.Parent = game.Workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
-scare.Volume = 2
+scare.Volume = 5
 
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -2969,7 +2750,6 @@ end)
 entity:Run()
 end)()
 
-
 --Shocker
 coroutine.wrap(function()
 while true do
@@ -2978,14 +2758,12 @@ loadstring(game:HttpGet("https://pastefy.app/1mLzDwTN/raw"))()
 end
 end)()
 
-
 --DeerGod
 coroutine.wrap(function()
 while true do wait(332)
 loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
 end
 end)()
-
 
 --Dread
 coroutine.wrap(function()
@@ -2994,6 +2772,219 @@ loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
 end
 end)()
 
+-- Optional Seek Eyes it might lag your device
+coroutine.wrap(function()
+    while true do
+        wait(0.0005)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0.0005)
+        local ohmygah = Instance.new("Folder")
+        ohmygah.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value]
+    end
+end)()
+
+-- Optional Seek Eyes 2 it might lag your device
+coroutine.wrap(function()
+    while true do
+        wait(0.005)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].ChildAdded:Connect(function(seekeye)
+	if seekeye.Name == "Eye" then
+		wait(0.0005)
+		local getSeek:Model = game:GetObjects("rbxassetid://11717372116")[1]
+		getSeek.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Folder
+		getSeek:PivotTo(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye.Black.CFrame)
+		workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye:Destroy()
+	else
+
+	end
+end)
+    end
+end)()
+
+-- New Seek music and animation loader
+coroutine.wrap(function()
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        wait(0.0005)
+        if game.Workspace:FindFirstChild("SeekMovingNewClone") then
+
+            function ReplaceAudGit(GithubSnd, SoundName)
+                local url = GithubSnd
+                if not isfile(SoundName .. ".mp3") then
+                    writefile(SoundName .. ".mp3", game:HttpGet(url))
+                end
+                return (getcustomasset or getsynasset)(SoundName .. ".mp3")
+            end
+
+            local a = game.Workspace.SevingNewClone
+            a.Seesic.SoundId = ReplaceAudGit("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true", "NewSeek")
+        end
+    end)
+end)()
+
+-- Seek Model
+workspace.ChildAdded:Connect(function(seek)
+	if seek.Name == "SeekMovingNewClone" then
+		wait(0.5)
+	    workspace.SeekMovingNewClone.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://0"
+		for i,v in pairs(workspace.SeekMovingNewClone.SeekRig:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Transparency = 1
+			end
+		end
+		local getSeek = game:GetObjects("rbxassetid://11664451634")[1]
+		getSeek.Parent = workspace.SeekMovingNewClone.Figure
+		getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
+		local Weld = Instance.new("WeldConstraint",getSeek)
+		Weld.Part0 = getSeek.PrimaryPart
+		Weld.Part1 = workspace.SeekMovingNewClone.Figure
+        workspace.SeekMovingNewClone.SeekMusic.SoundId = "rbxasset://custom_gloop/Hereicomeseekog.mp3"
+        workspace.SeekMovingNewClone.SeekRig:Destroy()
+       wait()
+        workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.FootseptsFar:Play()
+		 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Footsteps:Play()
+	   workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Splashing:Play()
+	   workspace.SeekMovingNewClone.Figure.SeekMoving.Figure["Splashing Far"]:Play()
+	wait()
+		local SeekRig = workspace.SeekMovingNewClone.Figure.SeekMoving:FindFirstChild("SeekRig")
+    	SeekRig:FindFirstChild("Root").Anchored = true
+    
+       local seksound = workspace.SeekMovingNewClone.SeekMusic
+	seksound.Played:Connect(function()
+		spawn(function()
+			wait(7)
+			workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.FootseptsFar:Play()
+			 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Footsteps:Play()
+			 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Splashing:Play()
+			 workspace.SeekMovingNewClone.Figure.SeekMoving.Figure["Splashing Far"]:Play()
+		end)
+		local raiser = SeekRig.AnimationController:LoadAnimation(SeekRig.AnimRaise) raiser:Play()
+		raiser.Stopped:Wait()
+		SeekRig.AnimationController:LoadAnimation(SeekRig.AnimRun):Play()
+end)
+       
+--SeekPivo
+  coroutine.wrap(function()
+       while true do wait()
+        getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
+       end
+  end)()
+       
+--Seek
+coroutine.wrap(function()
+  loadstring(game:HttpGet("https://pastefy.app/6yFiipMI/raw"))()
+end)() 
+
+	else
+
+	end
+end)
+
+-- Seek Model 2
+workspace.ChildAdded:Connect(function(seek)
+	if seek.Name == "SeekMovingNewClone" then
+		wait(0.5)
+	    workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovinNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+wait(0.1)
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMovingNewClone.SeekRig.StringCheese:Destroy()
+workspace.SeekMoving.SeekRigNewClone.StringCheese:Destroy()
+	else
+	end
+end)
+     
+-- NEW SEEK 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function() 
+    wait(3.5) 
+    if not workspace:FindFirstChild("SeekMovingNewClone") then 
+        return  
+    end 
+    
+    local RealSeek = workspace:FindFirstChild("SeekMovingNewClone") 
+    local RealSeekRig = RealSeek:FindFirstChild("SeekRig") 
+
+    for _, v in pairs(seekNew.Figure:GetChildren()) do 
+        if v:IsA("Sound") then 
+            v:Stop() 
+        end 
+    end 
+
+    RealSeekRig.Head.Eye:Destroy() 
+    RealSeekRig.Head.Black:Destroy() 
+    seekNew.Parent = workspace 
+    local SeekRig = seekNew:FindFirstChild("SeekRig") 
+    SeekRig:FindFirstChild("Root").Anchored = true 
+
+    spawn(function() 
+        while game:GetService("RunService").Heartbeat:Wait() and RealSeek do 
+            if RealSeekRig:FindFirstChild("Root") then 
+                SeekRig:FindFirstChild("Root").CFrame = RealSeekRig:FindFirstChild("Root").CFrame 
+            end 
+            for _, v in pairs(RealSeek.Figure:GetChildren()) do 
+                RealSeek.Figure.Footsteps:Stop() 
+                RealSeek.Figure.FootstepsFar:Stop() 
+            end 
+            for _, v in pairs(RealSeekRig:GetChildren()) do 
+                if v:IsA("BasePart") then 
+                    v.Transparency = 1 
+                    
+                    local sound = a.Ambience
+
+            if sound:IsA("Sound") then
+                sound.Played:Connect(function()
+                    print("YEEEEE WORKING!!!!") 
+                    local model = workspace:WaitForChild("seek2")
+                    local seekRig = model:WaitForChild("SeekRig")
+                    local animationController = seekRig:FindFirstChildOfClass("AnimationController")
+
+                    if animationController then
+                        local anim = seekRig:FindFirstChild("AnimRaise")
+                        
+                        if anim and anim:IsA("Animation") then
+                            local animationTrack = animationController:LoadAnimation(anim)
+                            animationTrack:Play()
+                        else
+                            warn("AnimRaise not found or is not an animation.")
+                        end
+                    else
+                        warn("AnimationController not found in SeekRig.")
+                    end
+                    
+                    wait(8.2)
+
+                    local model = workspace:WaitForChild("seek2")
+                    local seekRig = model:WaitForChild("SeekRig")
+                    local animationController = seekRig:FindFirstChildOfClass("AnimationController")
+
+                    if animationController then
+                        local anim = seekRig:FindFirstChild("AnimRun")
+                        
+                        if anim and anim:IsA("Animation") then
+                            local animationTrack = animationController:LoadAnimation(anim)
+                            animationTrack:Play()
+                        else
+                            warn("AnimRun not found or is not an animation.")
+                        end
+                    else
+                        warn("AnimationController not found in SeekRig.")
+                    end
+                end)
+            else
+                warn("Sound not found or is not an instance of Sound.")
+            end
+                end 
+            end 
+        end 
+    end)
+end)
 
 --Silence
 coroutine.wrap(function()
@@ -3001,7 +2992,6 @@ while true do wait(661)
 loadstring(game:HttpGet("https://pastefy.app/87ReQWOF/raw"))()
 end
 end)()
-
 
 --Cease
 coroutine.wrap(function()
@@ -3048,11 +3038,9 @@ coroutine.wrap(function()
 loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/A660hsgakahbsjhshsvhshsbachubbyhardmode"))()
 end)()
 
-
 --Hardcore Remake by Pr!me
 
 --Mode Made Original By Noonie And ping
 
 --Admincommand
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lolmusicseekfaceas/helsgsssgshs/refs/heads/main/admin"))()
