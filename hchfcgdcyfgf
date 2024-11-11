@@ -883,7 +883,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -1027,7 +1027,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -1171,7 +1171,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -1315,7 +1315,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -1459,7 +1459,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -2099,7 +2099,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -2387,7 +2387,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -2531,7 +2531,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
@@ -2675,7 +2675,7 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
     Background.Parent = JumpscareGui
     Face.Parent = Background
 local scare = Instance.new("Sound")
-scare.Parent = JumpscareGui
+scare.Parent = workspace
 scare.Name = "MyEarsBurn"
 scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
