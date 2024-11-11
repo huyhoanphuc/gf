@@ -1,4 +1,15 @@
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Stamina") then
+    warn("You have Already Loaded")
 
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Stamina"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
 
 -- I Thank you noname for frostbite
 
@@ -2794,7 +2805,7 @@ end)()
 
 --A90
 coroutine.wrap(function()
-whe true do wait(143)
+while true do wait(143)
 local TweenService = game:GetService("TweenService")
 	local LocalPlayer = game.Players.LocalPlayer
 	local UI = game.Players.LocalPlayer.PlayerGui.MainUI
