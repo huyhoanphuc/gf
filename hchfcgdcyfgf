@@ -691,7 +691,7 @@ end)()
 coroutine.wrap(function()
 while true do
 wait(math.random(32, 37))
-loadstring(game:HttpGet("https://pastefy.app/1mLzDwTN/raw"))()
+loadstring(game:HttpGet("https://pastefy.app/YMYOKyE2/raw"))()
 end
 end)()
 
