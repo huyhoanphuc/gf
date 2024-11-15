@@ -98,7 +98,7 @@ local function GetGitSoundID(GithubSnd,SoundName)
 	end
 end)()
 
--- Optional Seek Eyes it might lag your device
+--Optional Seek Eyes it might lag your device
 coroutine.wrap(function()
     while true do
         wait(0.0005)
@@ -109,7 +109,7 @@ coroutine.wrap(function()
     end
 end)()
 
--- Optional Seek Eyes 2 it might lag your device
+--Optional Seek Eyes 2 it might lag your device
 coroutine.wrap(function()
     while true do
         wait(0.005)
@@ -128,7 +128,7 @@ end)
     end
 end)()
 
--- New Seek music and animation loader
+--New Seek music and animation loader
 coroutine.wrap(function()
     game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
         wait(0.0005)
@@ -148,7 +148,7 @@ coroutine.wrap(function()
     end)
 end)()
 
--- Seek Model
+--Seek Model
 workspace.ChildAdded:Connect(function(seek)
 	if seek.Name == "SeekMovingNewClone" then
 		wait(0.5)
@@ -182,6 +182,14 @@ workspace.ChildAdded:Connect(function(seek)
 		raiser.Stopped:Wait()
 		SeekRig.AnimationController:LoadAnimation(SeekRig.AnimRun):Play()
 end)
+ 
+--SeekFooststop
+coroutine.wrap(function()
+workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.FootseptsFar:Stop()
+	workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Footsteps:Stop()
+	workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.Splashing:Stop()
+  workspace.SeekMovingNewClone.Figure.SeekMoving.Figure["Splashing Far"]:Stop()
+end)()    
        
 --SeekPivo
   coroutine.wrap(function()
@@ -200,7 +208,7 @@ end)()
 	end
 end)
 
--- Seek Model 2
+--Seek Model 2
 workspace.ChildAdded:Connect(function(seek)
 	if seek.Name == "SeekMovingNewClone" then
 		wait(0.5)
@@ -221,7 +229,7 @@ workspace.SeekMoving.SeekRigNewClone.StringCheese:Destroy()
 	end
 end)
      
--- NEW SEEK 
+--NEW SEEK 
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function() 
     wait(3.5) 
     if not workspace:FindFirstChild("SeekMovingNewClone") then 
