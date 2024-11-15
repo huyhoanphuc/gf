@@ -359,6 +359,202 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
 end)()
 
+--Shocker
+coroutine.wrap(function()
+while true do wait(32)
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local function spawnShocker()
+    local shockerModel = game:GetObjects("rbxassetid://11547803978")[1]
+    shockerModel.PrimaryPart = shockerModel:FindFirstChild("HumanoidRootPart") or shockerModel:FindFirstChildWhichIsA("Part")
+    
+    local camera = Workspace.CurrentCamera
+    shockerModel:SetPrimaryPartCFrame(camera.CFrame * CFrame.new(0, 0, -8))
+    shockerModel.Parent = Workspace
+
+    local oogaBoogaaPart = shockerModel:WaitForChild("OOGA BOOGAAAA")
+    local horrorScream = shockerModel:WaitForChild("OOGA BOOGAAAA"):WaitForChild("HORROR SCREAM 15")
+
+    local lookDuration = 4
+    local startTime = tick()
+    local playerLookingAtShocker = true
+
+    while playerLookingAtShocker do
+        wait(0.1)
+
+        local angle = (oogaBoogaaPart.Position - character.PrimaryPart.Position).unit
+        local direction = camera.CFrame.LookVector
+
+        if (angle:Dot(direction) > 0.9) then
+            if tick() - startTime >= lookDuration then
+                horrorScream:Play()
+                humanoid:TakeDamage(30)
+                local function GetGitSound(GithubSnd,SoundName)
+				local url=GithubSnd
+				if not isfile(SoundName..".mp3") then
+					writefile(SoundName..".mp3", game:HttpGet(url))
+				end
+				local sound=Instance.new("Sound")
+				sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+				return sound
+			end
+			game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 255, 255)
+	game.Lighting.MainColorCorrection.Contrast = 1
+	local tween = game:GetService("TweenService")
+	tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
+	local TweenService = game:GetService("TweenService")
+	local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(255, 255, 255)})
+	TW:Play()
+        local ShokerJC = GetGitSound("https://github.com/huyhoanphuc/thh/blob/main/km_20240823_720p_12f_20240823_021809.mp3?raw=true","ShokerJC")
+				ShokerJC.Parent = workspace
+				ShokerJC.Volume = 1.3
+				ShokerJC:Play()
+                playerLookingAtShocker = false
+
+                local speed = 10
+                local targetPosition = character.PrimaryPart.Position
+
+                while oogaBoogaaPart.Position.Y > targetPosition.Y do
+                    local directionToPlayer = (targetPosition - oogaBoogaaPart.Position).unit
+                    oogaBoogaaPart.Position = oogaBoogaaPart.Position + directionToPlayer * speed * 0.1
+                    wait(0.1)
+                end
+
+                oogaBoogaaPart.CanCollide = false
+                oogaBoogaaPart.Anchored = false
+                wait(3)
+                shockerModel:Destroy()
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Shocker"
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Shocker...",
+    "Dont look at it or it stuns you!"
+}, "Blue") -- "Blue" or "Yellow"
+                break
+            end
+        else
+            
+            oogaBoogaaPart.CanCollide = false
+            oogaBoogaaPart.Anchored = false
+            break
+        end
+    end
+oogaBoogaaPart.CanCollide = false
+oogaBoogaaPart.Anchored = false
+wait(0.98)
+getgenv().Title = "Shocking Experience" --Title Here
+					getgenv().Description = "Look at me." --Description Here
+					getgenv().Reason = "Encounter Shocker." --Reason Here
+					getgenv().BadgeId = 2129271052  --Replace Number with Your Badge ID
+					getgenv().Category = 10 --You can replace the Category or dont
+
+					local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.AchievementUnlock)
+					local Achievements = debug.getupvalue(Unlock, 1)
+					for i,v in pairs(require(game:GetService("ReplicatedStorage").Achievements)) do
+						v.Title = getgenv().Title
+						v.Desc = getgenv().Description
+						v.Reason = getgenv().Reason
+						v.BadgeId = getgenv().BadgeId
+						v.Category = getgenv().Category
+					end
+					Unlock(nil,"Join")
+wait(1)
+    shockerModel:Destroy()
+end
+
+spawnShocker()
+end
+end)()
+
+--DeerGod
+coroutine.wrap(function()
+while true do wait(332)
+loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
+end
+end)()
+
+--Dread
+coroutine.wrap(function()
+while true do wait(762)
+loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
+end
+end)()
+
+--Silence
+coroutine.wrap(function()
+while true do wait(661)
+loadstring(game:HttpGet("https://pastefy.app/87ReQWOF/raw"))()
+end
+end)()
+
+--Cease
+coroutine.wrap(function()
+while true do 
+wait(math.random(23, 370))
+loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/hdisgvshceaseeee"))()
+end
+end)()
+
+--A90
+coroutine.wrap(function()
+while true do wait(143)
+local TweenService = game:GetService("TweenService")
+	local LocalPlayer = game.Players.LocalPlayer
+	local UI = game.Players.LocalPlayer.PlayerGui.MainUI
+	local Jumpscare_A90 = UI.Jumpscare.Jumpscare_A90
+	local A90Module = UI.Initiator.Main_Game.RemoteListener.Modules.A90
+	local MainGame = require(UI.Initiator.Main_Game)
+	 Jumpscare_A90.Face.Image = "http://www.roblox.com/asset/?id=12635832722"
+	Jumpscare_A90.FaceAngry.Image = "http://www.roblox.com/asset/?id=12635955412"
+
+spawn(function()
+require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.A90)(require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game))
+end)
+
+spawn(function()
+wait(0.1) -- dont know any other way
+Survived = true
+end)
+
+repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_A90.FaceAngry.Visible == true
+if Survived then
+
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(72)
+local ReSt = game:GetService("ReplicatedStorage") 
+ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-90"
+end
+end
+end)()
+
+--Asitty
+coroutine.wrap(function()
+loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/A660hsgakahbsjhshsvhshsbachubbyhardmode"))()
+end)()
+
 --Frostbitea
 coroutine.wrap(function()
 wait()
@@ -544,12 +740,16 @@ scare.Volume = 5
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
 end)()
 
@@ -678,87 +878,17 @@ scare.Volume = 5
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
-end)()
-
---Shocker
-coroutine.wrap(function()
-while true do
-wait(math.random(32, 37))
-loadstring(game:HttpGet("https://pastefy.app/YMYOKyE2/raw"))()
-end
-end)()
-
---DeerGod
-coroutine.wrap(function()
-while true do wait(332)
-loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
-end
-end)()
-
---Dread
-coroutine.wrap(function()
-while true do wait(762)
-loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
-end
-end)()
-
---Silence
-coroutine.wrap(function()
-while true do wait(661)
-loadstring(game:HttpGet("https://pastefy.app/87ReQWOF/raw"))()
-end
-end)()
-
---Cease
-coroutine.wrap(function()
-while true do 
-wait(math.random(23, 370))
-loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/hdisgvshceaseeee"))()
-end
-end)()
-
---A90
-coroutine.wrap(function()
-while true do wait(143)
-local TweenService = game:GetService("TweenService")
-	local LocalPlayer = game.Players.LocalPlayer
-	local UI = game.Players.LocalPlayer.PlayerGui.MainUI
-	local Jumpscare_A90 = UI.Jumpscare.Jumpscare_A90
-	local A90Module = UI.Initiator.Main_Game.RemoteListener.Modules.A90
-	local MainGame = require(UI.Initiator.Main_Game)
-	 Jumpscare_A90.Face.Image = "http://www.roblox.com/asset/?id=12635832722"
-	Jumpscare_A90.FaceAngry.Image = "http://www.roblox.com/asset/?id=12635955412"
-
-spawn(function()
-require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.A90)(require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game))
-end)
-
-spawn(function()
-wait(0.1) -- dont know any other way
-Survived = true
-end)
-
-repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_A90.FaceAngry.Visible == true
-if Survived then
-
-wait(1)
-game.Players.LocalPlayer.Character.Humanoid:TakeDamage(72)
-local ReSt = game:GetService("ReplicatedStorage") 
-ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-90"
-end
-end
-end)()
-
---Asitty
-coroutine.wrap(function()
-loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/A660hsgakahbsjhshsvhshsbachubbyhardmode"))()
 end)()
 
 --Hardcore Remake by Pr!me
