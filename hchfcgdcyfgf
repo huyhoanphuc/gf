@@ -81,6 +81,37 @@ if game.ReplicatedStorage.GameData.LatestRoom.Value > 1 then
 	return
 end
 
+--jumscarerebound
+coroutine.wrap(function()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 0
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/gf/blob/main/km_20241117_360p_12f_20241117_030155.mp3?raw=true", 1, "Thereboudjumscare")
+
+local function GetGitSoundID(GithubSnd,SoundName)
+		SoundName=tostring(SoundName)
+		local url=GithubSnd
+		SoundName=tostring(SoundName)
+		local url=GithubSnd
+		FileName = SoundName
+		writefile("customObject_Sound_"..FileName..".mp3", game:HttpGet(url))
+		return (getcustomasset or getsynasset)("customObject_Sound_"..FileName..".mp3")
+	end
+end)()
+
 --MuscSeekaajs
 coroutine.wrap(function()
 function GitAud(soundgit,filename)
@@ -556,13 +587,6 @@ loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
 end
 end)()
 
---Dread
-coroutine.wrap(function()
-while true do wait(762)
-loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
-end
-end)()
-
 --Silence
 coroutine.wrap(function()
 while true do wait(661)
@@ -954,4 +978,3 @@ end)()
 --Hardcore Remake by Pr!me
 
 --Mode Made Original By Noonie And ping
-
