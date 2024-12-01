@@ -600,7 +600,7 @@ local entity = spawner.Create({
 		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 15,
+		Speed = 25,
 		Delay = math.random(0.001, 0.001),
 		Reversed = false
 	},
@@ -660,7 +660,7 @@ local entity = spawner.Create({
 		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 15,
+		Speed = 25,
 		Delay = math.random(0, 0),
 		Reversed = false
 	},
