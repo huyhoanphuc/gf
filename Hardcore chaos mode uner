@@ -640,7 +640,7 @@ entity:SetCallback("OnSpawned", function()
 local entity = spawner.Create({
 	Entity = {
 		Name = "Deergod",
-		Asset = "rbxassetid://18866321970",
+		Asset = "rbxassetid://4889243231",
 		HeightOffset = 0
 	},
 	Lights = {
