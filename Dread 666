@@ -90,10 +90,10 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
-	local v = game.Players.LocalPlayer
+wait(1)
+local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
 			end
 					
@@ -187,12 +187,12 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
+wait(1)
 local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
-	end
+			end
 	
 local Speed = 10
 
@@ -284,12 +284,12 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
+wait(1)
 local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
-	end
+			end
 	
 local Speed = 10
 
@@ -381,12 +381,12 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
+wait(1)
 local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
-	end
+			end
 	
 local Speed = 10
 
@@ -478,12 +478,12 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
+wait(1)
 local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
-	end
+			end
 	
 local Speed = 10
 
@@ -575,12 +575,12 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
+wait(1)
 local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
-	end
+			end
 	
 local Speed = 10
 
@@ -672,10 +672,10 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(2)
+wait(1)
 local v = game.Players.LocalPlayer
 						
-						if not v.Character:GetAttribute("Hiding") then
+						if v.Character:GetAttribute("Hiding") then
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
 			end
 			
