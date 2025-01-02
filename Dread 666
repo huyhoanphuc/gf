@@ -89,8 +89,9 @@ event:Disconnect()
 wait(5)
 Workspace.Dread:Destroy()
 wait(1)						
-							
+if v.Character:GetAttribute("Hiding") then							
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000)
+								end
 						  wait()
 						
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/Dread%20666"))()
