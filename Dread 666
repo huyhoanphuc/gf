@@ -90,7 +90,13 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
+wait(2)
+	local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+			end
+					
 local Speed = 10
 
 local Workspace = game:GetService("Workspace")
@@ -181,7 +187,13 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
+wait(2)
+local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+	end
+	
 local Speed = 10
 
 local Workspace = game:GetService("Workspace")
@@ -272,7 +284,13 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
+wait(2)
+local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+	end
+	
 local Speed = 10
 
 local Workspace = game:GetService("Workspace")
@@ -363,7 +381,13 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
+wait(2)
+local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+	end
+	
 local Speed = 10
 
 local Workspace = game:GetService("Workspace")
@@ -454,7 +478,13 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
+wait(2)
+local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+	end
+	
 local Speed = 10
 
 local Workspace = game:GetService("Workspace")
@@ -545,7 +575,13 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
+wait(2)
+local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+	end
+	
 local Speed = 10
 
 local Workspace = game:GetService("Workspace")
@@ -636,8 +672,14 @@ event:Disconnect()
 wait(6)
 Workspace.Dread:Destroy()
 Workspace.Dummy:Destroy()
-wait(6)
-
+wait(2)
+local v = game.Players.LocalPlayer
+						
+						if not v.Character:GetAttribute("Hiding") then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+			end
+			
+			
 end
 end
 end)()
