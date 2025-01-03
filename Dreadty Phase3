@@ -1,0 +1,110 @@
+--SPhase3
+coroutine.wrap(function()
+local Speed = 14
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local runService = game:GetService("RunService")
+local Debris = game:GetService("Debris")local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dummy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Wicked = game:GetObjects("rbxassetid://16834807322")[1]
+Dummy.Parent = workspace
+Wicked.Parent = workspace
+
+local primary_part = Wicked:FindFirstChildWhichIsA("BasePart") or Wicked:FindFirstChildWhichIsA("Part")
+
+Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 1850)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).unit
+    Dummy.HumanoidRootPart.Velocity = Direction * Speed
+    Dummy.HumanoidRootPart.CFrame = CFrame.new(Dummy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+local event = runService.RenderStepped:Connect(function()
+if Wicked:IsDescendantOf(workspace) and Dummy:IsDescendantOf(workspace) and Dummy:FindFirstChild("HumanoidRootPart") and Dummy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Wicked:PivotTo(Dummy.HumanoidRootPart.CFrame)
+end
+end)
+
+local function canSeeTarget(target,size)
+					if killed == true then
+						return
+					end
+					local origin = Wicked.RushNew.Position
+					local direction = (target.HumanoidRootPart.Position - Wicked.RushNew.Position).unit * size
+					local ray = Ray.new(origin, direction)
+
+					local hit, pos = workspace:FindPartOnRay(ray, Wicked.RushNew)
+
+
+					if hit then
+						if hit:IsDescendantOf(target) then
+							killed = true
+							return true
+						end
+					else
+						return false
+					end
+				end
+				
+--notHiding
+coroutine.wrap(function()
+				spawn(function()
+					while Wicked ~= nil do wait(0.2)
+						local v = game.Players.LocalPlayer
+						local parent = script.Parent
+						if not v.Character:GetAttribute("Hiding") then
+							if canSeeTarget(v.Character,10) then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+event:Disconnect()
+
+Workspace.Dread:Destroy()
+
+				game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+				
+          end
+     end
+end
+end)				
+end)()
+
+--Hiding
+coroutine.wrap(function()
+while Wicked  do wait(0.2)
+						local v = game.Players.LocalPlayer
+						
+if v.Character:GetAttribute("Hiding") then
+	wait()
+event:Disconnect()
+
+wait(5)
+Workspace.Dread:Destroy()
+wait(1)						
+if v.Character:GetAttribute("Hiding") then							
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000)
+								end
+						  wait()
+						
+loadstring(game:HttpGet("https://pastefy.app/tGT0NJR3/raw"))()
+
+end
+end
+end)()
+
+--Destroy all entity
+coroutine.wrap(function()
+while true do wait()
+loadstring(game:HttpGet("https://pastefy.app/Do81uu9V/raw"))() 
+end
+end)()
+
+end)()
