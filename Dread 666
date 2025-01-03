@@ -15,7 +15,7 @@ Wicked.Parent = workspace
 
 local primary_part = Wicked:FindFirstChildWhichIsA("BasePart") or Wicked:FindFirstChildWhichIsA("Part")
 
-Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 1500)
+Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 2350)
 
 local function followPlayer()
     local Direction = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).unit
