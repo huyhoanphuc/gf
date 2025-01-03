@@ -1,3 +1,5 @@
+--Phase2
+coroutine.wrap(function()
 local Speed = 12
 
 local Workspace = game:GetService("Workspace")
