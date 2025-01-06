@@ -1,6 +1,6 @@
---Dread
+	--Dreadtyu
 coroutine.wrap(function()
-local Speed = 7
+local Speed = 13
 
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
@@ -69,8 +69,11 @@ event:Disconnect()
 
 Workspace.Dread:Destroy()
 
+wait()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/Dread%20666"))()
+
 				game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-				
+			wait()
           end
      end
 end
