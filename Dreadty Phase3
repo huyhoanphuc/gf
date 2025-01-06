@@ -1,6 +1,4 @@
---SPhase3
-coroutine.wrap(function()
-local Speed = 14
+local Speed = 20
 
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
@@ -70,7 +68,9 @@ event:Disconnect()
 Workspace.Dread:Destroy()
 
 				game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-				
+			
+	loadstring(game:HttpGet("https://github.com/huyhoanphuc/gf/raw/refs/heads/main/Dreadty%20Phase3"))()
+
           end
      end
 end
@@ -98,13 +98,4 @@ loadstring(game:HttpGet("https://github.com/huyhoanphuc/gf/raw/refs/heads/main/D
 
 end
 end
-end)()
-
---Destroy all entity
-coroutine.wrap(function()
-while true do wait()
-loadstring(game:HttpGet("https://pastefy.app/Do81uu9V/raw"))() 
-end
-end)()
-
 end)()
